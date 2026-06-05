@@ -1,0 +1,21 @@
+[package]
+name = "ternary-types"
+version = "0.1.0"
+edition = "2021"
+description = "A lightweight Ternary (trinary) enum with serde support — Negative, Neutral, Positive"
+repository = "https://github.com/SuperInstance/ternary-types"
+license = "MIT OR Apache-2.0"
+keywords = ["ternary", "trinary", "enum", "serde"]
+categories = ["data-structures", "encoding", "no-std"]
+
+# Only enable serde when the feature is explicitly requested — keep the base crate dependency-free.
+[features]
+default = []
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { version = "1", optional = true, features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1"
+serde_test = "1"
