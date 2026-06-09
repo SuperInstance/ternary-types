@@ -1,19 +1,17 @@
 [package]
 name = "ternary-types"
-version = "0.2.0"
+version = "0.1.0"
 edition = "2021"
-description = "Central dependency hub for the SuperInstance ternary fleet. Core types: Ternary, TritVector, TernaryMatrix, packed encoding, and Z₃ arithmetic."
+description = "A lightweight Ternary (trinary) enum with serde support — Negative, Neutral, Positive"
 repository = "https://github.com/SuperInstance/ternary-types"
 license = "MIT OR Apache-2.0"
-keywords = ["ternary", "trinary", "trit", "silo", "fleet"]
-categories = ["data-structures", "encoding", "no-std", "mathematics", "science"]
+keywords = ["ternary", "trinary", "enum", "serde"]
+categories = ["data-structures", "encoding", "no-std"]
 
+# Only enable serde when the feature is explicitly requested — keep the base crate dependency-free.
 [features]
-default = ["std"]
-std = []
+default = []
 serde = ["dep:serde"]
-# Enable packed-bit-level operations (unsafe for bit twiddling)
-packed = []
 
 [dependencies]
 serde = { version = "1", optional = true, features = ["derive"] }
@@ -21,4 +19,3 @@ serde = { version = "1", optional = true, features = ["derive"] }
 [dev-dependencies]
 serde_json = "1"
 serde_test = "1"
-rand = "0.8"
