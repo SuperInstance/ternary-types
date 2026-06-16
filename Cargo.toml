@@ -4,6 +4,7 @@ version = "0.2.0"
 edition = "2021"
 description = "Central dependency hub for the SuperInstance ternary fleet. Core types: Ternary, TritVector, TernaryMatrix, packed encoding, and Z₃ arithmetic."
 repository = "https://github.com/SuperInstance/ternary-types"
+homepage = "https://superinstance.ai"
 license = "MIT OR Apache-2.0"
 keywords = ["ternary", "trinary", "trit", "silo", "fleet"]
 categories = ["data-structures", "encoding", "no-std", "mathematics", "science"]
